@@ -390,3 +390,27 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("*Herramienta desarrollada para apoyo informativo a docentes mexicanos*")
+
+# Agregar al final de tu app.py
+st.markdown("---")
+st.markdown("""
+<div style='background-color: #f0f0f0; padding: 15px; border-radius: 5px; margin-top: 20px;'>
+<h4 style='color: #d63031; margin-bottom: 10px;'>⚠️ Aviso Legal Importante</h4>
+<p style='font-size: 14px; line-height: 1.5;'>
+- <strong>Este bot es únicamente informativo</strong> y no reemplaza la consulta directa de los protocolos oficiales.<br>
+- <strong>Siempre verifique</strong> la información con los documentos originales antes de actuar.<br>
+- <strong>En emergencias reales</strong>, contacte inmediatamente a las autoridades (911) y a la dirección del plantel.<br>
+- <strong>El usuario es responsable</strong> de validar la información y seguir los protocolos oficiales vigentes.
+</p>
+</div>
+
+<div style='background-color: #3498db; color: white; padding: 20px; border-radius: 10px; margin-top: 20px; text-align: center;'>
+<h4 style='color: #061f30; margin-bottom: 15px;'>Creado por:</h4>
+<p style='font-size: 18px; font-weight: bold; margin-bottom: 5px;'>QFB Martín Ángel Carrízalez Piña</p>
+<p style='font-style: italic; margin-bottom: 15px;'>Especialista en IA y Ciencia de Datos aplicada a la Educación</p>
+<p style='margin-bottom: 10px;'>🤝 Conectemos y sigamos aprendiendo juntos:</p>
+<p>📧 martin.carrizalez0823@alumnos.udg.mx</p>
+<p style='margin-top: 15px; font-style: italic;'>¿Dudas, sugerencias o quieres compartir tu experiencia con IA? ¡Escríbeme!</p>
+<p style='margin-top: 10px; font-size: 12px;'>© 2025 - Guía práctica para educadores que quieren dominar la IA generativa</p>
+</div>
+""", unsafe_allow_html=True)

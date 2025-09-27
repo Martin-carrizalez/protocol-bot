@@ -20,13 +20,13 @@ pip install langchain
 3. Añade tu clave:
 
 ```toml
-GROQ_API_KEY = "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"
+GROQ_API_KEY = ""
 ```
 
 #### Opción B: Directamente en el código (MENOS SEGURO)
 Modifica esta línea en el código:
 ```python
-groq_client = Groq(api_key="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")
+groq_client = Groq(api_key="")
 ```
 
 ### 3. **Estructura de carpetas**

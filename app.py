@@ -375,3 +375,18 @@ else:
 # Footer
 st.markdown("---")
 st.markdown("*🤖 Asistente de Protocolos v2.0 - Powered by Groq & Hugging Face*")
+# Agregar al final de tu app.py, antes del último st.markdown
+st.markdown("""
+<div style='background-color: #f0f0f0; padding: 15px; border-radius: 5px; margin-top: 20px;'>
+<h4 style='color: #d63031; margin-bottom: 10px;'>⚠️ Aviso Legal Importante</h4>
+<p style='font-size: 14px; line-height: 1.5;'>
+- <strong>Este bot es únicamente informativo</strong> y no reemplaza la consulta directa de los protocolos oficiales.<br>
+- <strong>Siempre verifique</strong> la información con los documentos originales antes de actuar.<br>
+- <strong>En emergencias reales</strong>, contacte inmediatamente a las autoridades (911) y a la dirección del plantel.<br>
+- <strong>El usuario es responsable</strong> de validar la información y seguir los protocolos oficiales vigentes.<br>
+- <strong>Esta herramienta no constituye asesoría legal</strong> ni reemplaza la capacitación oficial en protocolos.
+</p>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("*Herramienta desarrollada para apoyo informativo a docentes mexicanos*")

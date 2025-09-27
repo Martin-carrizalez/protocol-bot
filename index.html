@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Interactiva de Protocolos Educativos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.2em;
+        }
+        
+        .warning-banner {
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            margin-bottom: 25px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .section-header {
+            background: #3498db;
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .section-header:hover {
+            background: #2980b9;
+        }
+        
+        .section-header h2 {
+            font-size: 1.5em;
+        }
+        
+        .toggle-icon {
+            font-size: 1.2em;
+            transition: transform 0.3s;
+        }
+        
+        .section-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .section-content.active {
+            padding: 25px;
+            max-height: 2000px;
+        }
+        
+        .emergency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .emergency-card {
+            background: #f8f9fa;
+            border-left: 5px solid #e74c3c;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .emergency-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .emergency-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .emergency-steps {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 2px solid #3498db;
+            display: none;
+        }
+        
+        .emergency-steps.active {
+            display: block;
+        }
+        
+        .step {
+            background: #ecf0f1;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .step-number {
+            background: #27ae60;
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .contact-info {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .contact-item {
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .contact-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #f39c12;
+        }
+        
+        .legal-disclaimer {
+            background: #34495e;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .btn {
+            background: #27ae60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #229954;
+        }
+        
+        .btn-danger {
+            background: #e74c3c;
+        }
+        
+        .btn-danger:hover {
+            background: #c0392b;
+        }
+        
+        .format-link {
+            background: #f39c12;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        .format-link:hover {
+            background: #e67e22;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚨 Guía de Protocolos Educativos</h1>
+            <p>Herramienta interactiva para docentes mexicanos - Protege tu carrera, protege a tus estudiantes</p>
+        </div>
+        
+        <div class="warning-banner">
+            ⚠️ EN EMERGENCIAS REALES: LLAMA AL 911 INMEDIATAMENTE Y NOTIFICA AL DIRECTOR
+        </div>
+        
+        <!-- Sección Emergencias Médicas -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('medical')">
+                <h2>🩺 Emergencias Médicas</h2>
+                <span class="toggle-icon" id="medical-icon">+</span>
+            </div>
+            <div class="section-content" id="medical-content">
+                <div class="emergency-grid">
+                    <div class="emergency-card" onclick="showSteps('accidente')">
+                        <h3>🤕 Accidente de Estudiante</h3>
+                        <p>Golpes, caídas, heridas</p>
+                    </div>
+                    <div class="emergency-card" onclick="showSteps('convulsion')">
+                        <h3>🧠 Convulsiones</h3>
+                        <p>Crisis epilépticas</p>
+                    </div>
+                    <div class="emergency-card" onclick="showSteps('asfixia')">
+                        <h3>😵 Asfixia/Atragantamiento</h3>
+                        <p>Obstrucción de vías respiratorias</p>
+                    </div>
+                </div>
+                
+                <div class="emergency-steps" id="accidente-steps">
+                    <h3>🤕 Protocolo: Accidente de Estudiante</h3>
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>Evaluar la gravedad:</strong> Verificar si hay golpes, heridas o dolor
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>NO dar medicamentos</strong> sin autorización de padres
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>Notificar inmediatamente:</strong> Director + Padres/Tutores
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <strong>Mantener en reposo</strong> hasta que lleguen servicios médicos
+                    </div>
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <strong>Documentar todo:</strong> Llenar formato de incidente
+                    </div>
+                    <p><strong>Fuente:</strong> Protocolo de actuación escolar, pág. 78</p>
+                </div>
+                
+                <div class="emergency-steps" id="convulsion-steps">
+                    <h3>🧠 Protocolo: Convulsiones</h3>
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>NO tratar de impedir</strong> los movimientos
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>Proteger la cabeza:</strong> Poner algo blando debajo
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>Retirar objetos</strong> con los que pueda golpearse
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <strong>NO introducir nada</strong> en su boca
+                    </div>
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <strong>Despejar el área</strong> y llamar al 911
+                    </div>
+                </div>
+                
+                <div class="emergency-steps" id="asfixia-steps">
+                    <h3>😵 Protocolo: Asfixia/Atragantamiento</h3>
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>Maniobra de Heimlich:</strong> Solo si sabes hacerla
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>Llamar al 911</strong> inmediatamente
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>Mantener calmado</strong> al estudiante
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <strong>Preparar RCP</strong> si pierde conciencia
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sección Violencia -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('violence')">
+                <h2>⚠️ Violencia Escolar</h2>
+                <span class="toggle-icon" id="violence-icon">+</span>
+            </div>
+            <div class="section-content" id="violence-content">
+                <div class="emergency-grid">
+                    <div class="emergency-card" onclick="showSteps('pelea')">
+                        <h3>👊 Pelea entre Estudiantes</h3>
+                        <p>Agresión física</p>
+                    </div>
+                    <div class="emergency-card" onclick="showSteps('bullying')">
+                        <h3>😔 Bullying/Acoso</h3>
+                        <p>Acoso presencial o digital</p>
+                    </div>
+                    <div class="emergency-card" onclick="showSteps('amenaza')">
+                        <h3>🗡️ Amenazas/Armas</h3>
+                        <p>Objetos peligrosos</p>
+                    </div>
+                </div>
+                
+                <div class="emergency-steps" id="pelea-steps">
+                    <h3>👊 Protocolo: Pelea entre Estudiantes</h3>
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>Separar inmediatamente</strong> a los involucrados de forma segura
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>Notificar al director</strong> inmediatamente
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>Revisar lesiones</strong> y dar primeros auxilios si es necesario
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <strong>Contactar padres</strong> de ambos estudiantes
+                    </div>
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <strong>Documentar todo:</strong> Llenar reporte de incidente
+                    </div>
+                    <a href="#" class="format-link">📄 Descargar Formato de Reporte</a>
+                </div>
+                
+                <div class="emergency-steps" id="bullying-steps">
+                    <h3>😔 Protocolo: Bullying/Acoso</h3>
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>Garantizar seguridad</strong> del estudiante afectado
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>Recolectar evidencia:</strong> Capturas, mensajes, testimonios
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>Entrevistar por separado</strong> a víctima y agresor
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <strong>Notificar a padres</strong> de ambos estudiantes
+                    </div>
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <strong>Canalizar con psicología</strong> escolar
+                    </div>
+                </div>
+                
+                <div class="emergency-steps" id="amenaza-steps">
+                    <h3>🗡️ Protocolo: Amenazas/Armas</h3>
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>NO confrontar directamente</strong> al estudiante
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>Evacuar el área</strong> discretamente
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>Llamar al 911</strong> inmediatamente
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <strong>Notificar director</strong> y activar código de emergencia
+                    </div>
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <strong>Colaborar con autoridades</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sección Seguridad -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('security')">
+                <h2>🔒 Seguridad y Robos</h2>
+                <span class="toggle-icon" id="security-icon">+</span>
+            </div>
+            <div class="section-content" id="security-content">
+                <div class="emergency-grid">
+                    <div class="emergency-card" onclick="showSteps('robo')">
+                        <h3>💰 Robo en Plantel</h3>
+                        <p>Sustracción de bienes</p>
+                    </div>
+                    <div class="emergency-card" onclick="showSteps('intruso')">
+                        <h3>🚫 Intruso en Escuela</h3>
+                        <p>Persona no autorizada</p>
+                    </div>
+                    <div class="emergency-card" onclick="showSteps('evacuacion')">
+                        <h3>🚨 Evacuación</h3>
+                        <p>Desalojo por emergencia</p>
+                    </div>
+                </div>
+                
+                <div class="emergency-steps" id="robo-steps">
+                    <h3>💰 Protocolo: Robo en Plantel</h3>
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>Mantener la calma</strong> y no alarmar estudiantes
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>Asegurar a los estudiantes</strong> en lugar seguro
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>NO perseguir al ladrón</strong> - priorizar seguridad
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <strong>Llamar al 911</strong> y notificar al director
+                    </div>
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <strong>Documentar:</strong> Inventario de objetos robados
+                    </div>
+                    <div class="step">
+                        <span class="step-number">6</span>
+                        <strong>Presentar denuncia</strong> formal ante ministerio público
+                    </div>
+                </div>
+                
+                <div class="emergency-steps" id="intruso-steps">
+                    <h3>🚫 Protocolo: Intruso en Escuela</h3>
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>Identificar al intruso</strong> a distancia prudente
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>Notificar discretamente</strong> al director
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>Activar código de seguridad</strong>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <strong>Encerrar estudiantes</strong> en aulas seguras
+                    </div>
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <strong>Llamar al 911</strong> si hay amenaza
+                    </div>
+                </div>
+                
+                <div class="emergency-steps" id="evacuacion-steps">
+                    <h3>🚨 Protocolo: Evacuación</h3>
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <strong>Activar alarma</strong> según código establecido
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <strong>Instruir estudiantes:</strong> No correr, no gritar
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <strong>Dirigir al punto de reunión</strong> designado
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <strong>Pasar lista</strong> y reportar ausencias
+                    </div>
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <strong>Esperar instrucciones</strong> de autoridades
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sección Bitácoras -->
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('logs')">
+                <h2>📝 Importancia de las Bitácoras</h2>
+                <span class="toggle-icon" id="logs-icon">+</span>
+            </div>
+            <div class="section-content" id="logs-content">
+                <h3>🛡️ ¿Por qué son cruciales las bitácoras?</h3>
+                <div class="step">
+                    <strong>Protección Legal:</strong> Son evidencia de que cumpliste con los protocolos
+                </div>
+                <div class="step">
+                    <strong>Responsabilidad:</strong> Demuestran que actuaste de manera profesional
+                </div>
+                <div class="step">
+                    <strong>Seguimiento:</strong> Permiten evaluar y mejorar procedimientos
+                </div>
+                <div class="step">
+                    <strong>Comunicación:</strong> Facilitan el intercambio de información con autoridades
+                </div>
+                
+                <h3>📋 Qué debe contener tu bitácora:</h3>
+                <ul style="margin: 20px; line-height: 2;">
+                    <li>✅ Fecha y hora exacta del incidente</li>
+                    <li>✅ Descripción detallada de lo ocurrido</li>
+                    <li>✅ Personas involucradas (estudiantes, staff, padres)</li>
+                    <li>✅ Acciones tomadas paso a paso</li>
+                    <li>✅ A quién notificaste y cuándo</li>
+                    <li>✅ Testigos presentes</li>
+                    <li>✅ Resultado final</li>
+                </ul>
+                
+                <div style="margin: 20px 0;">
+                    <a href="#" class="format-link">📄 Formato de Bitácora de Incidentes</a>
+                    <a href="#" class="format-link">📄 Formato de Seguimiento</a>
+                    <a href="#" class="format-link">📄 Plantilla de Reporte Mensual</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contactos de Emergencia -->
+        <div class="contact-info">
+            <h3 style="text-align: center; margin-bottom: 20px;">📞 Contactos de Emergencia</h3>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-number">911</div>
+                    <div>Emergencias Generales</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-number">066</div>
+                    <div>Emergencias Locales</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-number">065</div>
+                    <div>Cruz Roja</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-number">911</div>
+                    <div>Bomberos</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Aviso Legal -->
+        <div class="legal-disclaimer">
+            <h3>⚖️ Aviso Legal Importante</h3>
+            <p style="margin: 15px 0;">
+                <strong>Esta guía es únicamente informativa</strong> y no reemplaza la capacitación oficial ni los protocolos vigentes de tu institución.
+            </p>
+            <p style="margin: 15px 0;">
+                <strong>En México, la omisión en el cumplimiento de protocolos puede tener consecuencias legales.</strong> 
+                Siempre verifica con los documentos oficiales y sigue la cadena de mando establecida.
+            </p>
+            <p style="margin: 15px 0;">
+                <strong>El usuario es responsable</strong> de validar la información y actuar conforme a la normativa vigente de su estado y región.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId + '-content');
+            const icon = document.getElementById(sectionId + '-icon');
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                icon.textContent = '+';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.classList.add('active');
+                icon.textContent = '−';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+        
+        function showSteps(stepId) {
+            // Ocultar todos los pasos
+            const allSteps = document.querySelectorAll('.emergency-steps');
+            allSteps.forEach(step => step.classList.remove('active'));
+            
+            // Mostrar el paso seleccionado
+            const selectedStep = document.getElementById(stepId + '-steps');
+            if (selectedStep) {
+                selectedStep.classList.add('active');
+            }
+        }
+        
+        // Cerrar pasos cuando se hace clic fuera
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.emergency-card') && !event.target.closest('.emergency-steps')) {
+                const allSteps = document.querySelectorAll('.emergency-steps');
+                allSteps.forEach(step => step.classList.remove('active'));
+            }
+        });
+    </script>
+</body>
+</html>

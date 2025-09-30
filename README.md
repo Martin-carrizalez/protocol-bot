@@ -117,8 +117,8 @@ Ver [LICENSE](LICENSE) para más detalles o visita: https://creativecommons.org/
 *Especialista en IA y Ciencia de Datos aplicada a la Educación*
 
 - Email: martin.carrizalez0823@alumnos.udg.mx
-- LinkedIn: [https://www.linkedin.com/in/martin-angel-carrizalez-pina-b55475371/]
-- GitHub: [https://github.com/Martin-carrizalez]
+- LinkedIn: ["https://www.linkedin.com/in/martin-angel-carrizalez-pina-b55475371/"]
+- GitHub: ["https://github.com/Martin-carrizalez"]
 
 ## Contribuciones
 

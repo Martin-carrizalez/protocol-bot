@@ -28,9 +28,6 @@ Esta herramienta fue creada específicamente para docentes mexicanos que necesit
 - Diseño intuitivo con tarjetas y acordeones interactivos.
 - 20+ escenarios cubiertos con instrucciones precisas.
 
-![Demostración de la Guía Interactiva](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3NqejlxN2hicXd5bzZlM3Z5cnZyZnZpd2s4NHc4dnBldDBoM2dyaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7bu3XilJ5BOiSGic/giphy.gif)
-*Nota: Reemplaza el GIF de arriba con una grabación de tu guía en acción.*
-
 
 🌐 **Ver la Guía**
 📖 **[Haz clic aquí para abrir la Versión Web Interactiva](https://martin-carrizalez.github.io/guia-ia-educadores/guia-protocolos.html)**

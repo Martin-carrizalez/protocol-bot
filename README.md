@@ -1,127 +1,154 @@
-# 🚨 Asistente de Protocolos de Actuación Educativa
+![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
+# 🚨 Guía Interactiva de Protocolos Educativos
 
-## 📋 Instalación y Configuración
+## Descripción
 
-### 1. **Instalar dependencias**
+Herramienta web interactiva diseñada para ayudar a docentes mexicanos a consultar rápidamente protocolos de actuación en situaciones de emergencia, accidentes, violencia y robos escolares.
+
+Esta guía busca prevenir situaciones de omisión legal y proporcionar información clara sobre procedimientos establecidos en los protocolos oficiales de actuación escolar.
+
+## Motivación del Proyecto
+
+En México, diversos casos han demostrado que docentes enfrentan consecuencias legales por omisión al no seguir correctamente los protocolos establecidos. Esta herramienta fue creada para:
+
+- Facilitar el acceso rápido a información de protocolos
+- Reducir el riesgo de omisión por desconocimiento
+- Proporcionar pasos claros y estructurados para emergencias
+- Enfatizar la importancia de la documentación (bitácoras)
+
+## Características
+
+- **Interfaz intuitiva** con diseño moderno y responsive
+- **20+ escenarios de emergencia** cubiertos
+- **Pasos numerados y claros** para cada situación
+- **Sección sobre bitácoras** y su importancia legal
+- **Contactos de emergencia** siempre visibles
+- **Funciona offline** una vez descargado
+- **Sin necesidad de instalación** - solo abre el HTML
+
+## Contenido Incluido
+
+### Emergencias Médicas
+- Accidentes de estudiantes
+- Convulsiones
+- Asfixia/Atragantamiento
+
+### Violencia Escolar
+- Peleas entre estudiantes
+- Bullying y acoso (presencial y digital)
+- Amenazas y armas
+
+### Seguridad
+- Robos en el plantel
+- Intrusos
+- Evacuaciones de emergencia
+
+### Documentación
+- Importancia legal de las bitácoras
+- Qué debe contener un reporte
+- Formatos recomendados
+
+## Instalación y Uso
+
+### Opción 1: Usar directamente desde GitHub Pages
+
+1. Visita: `https://TU-USUARIO.github.io/TU-REPOSITORIO/`
+2. Navega por las secciones
+3. Haz clic en las tarjetas para ver los protocolos
+
+### Opción 2: Descargar y usar offline
+
+1. Descarga el archivo `guia-protocolos.html`
+2. Ábrelo con cualquier navegador web
+3. Funciona sin conexión a internet
+
+### Opción 3: Clonar el repositorio
+
 ```bash
-pip install streamlit
-pip install pypdf
-pip install sentence-transformers
-pip install scikit-learn
-pip install groq
-pip install langchain
+git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git
+cd TU-REPOSITORIO
+# Abre guia-protocolos.html en tu navegador
 ```
 
-### 2. **Configurar la API de Groq**
+## Estructura del Proyecto
 
-#### Opción A: Con archivo de secretos de Streamlit (RECOMENDADO)
-1. Crea una carpeta `.streamlit` en la raíz de tu proyecto
-2. Crea un archivo `.streamlit/secrets.toml`
-3. Añade tu clave:
-
-```toml
-GROQ_API_KEY = ""
+```
+protocolo-guia/
+├── guia-protocolos.html    # Archivo principal
+├── README.md               # Este archivo
+├── LICENSE                 # Licencia CC BY-NC 4.0
+└── assets/                 # (Opcional) Imágenes o recursos
 ```
 
-#### Opción B: Directamente en el código (MENOS SEGURO)
-Modifica esta línea en el código:
-```python
-groq_client = Groq(api_key="")
-```
+## Aviso Legal Importante
 
-### 3. **Estructura de carpetas**
-```
-tu-proyecto/
-├── app_final_mejorado.py
-├── .streamlit/
-│   └── secrets.toml
-└── protocolos_test/  (se crea automáticamente)
-```
+Esta guía es **únicamente informativa** y no reemplaza:
+- La capacitación oficial en protocolos
+- Los documentos oficiales de tu institución
+- La asesoría legal profesional
 
-### 4. **Ejecutar la aplicación**
-```bash
-streamlit run app_final_mejorado.py
-```
+**El usuario es responsable de:**
+- Verificar la información con protocolos oficiales vigentes
+- Seguir la normativa de su estado y región
+- Actuar conforme a la cadena de mando establecida
 
-## 🔧 **Cómo funciona**
+**En emergencias reales:**
+- Contacta inmediatamente al 911
+- Notifica al director del plantel
+- Sigue los protocolos oficiales de tu institución
 
-### **¿Dónde pongo mis PDFs?**
-**NO necesitas crear carpetas manualmente.** El sistema funciona así:
+## Licencia
 
-1. **Ejecutas** la aplicación con `streamlit run app_final_mejorado.py`
-2. **Se abre** una interfaz web en tu navegador
-3. **Subes los PDFs** usando el botón "Carga tus PDFs de protocolos aquí"
-4. **El sistema** procesa automáticamente los documentos
-5. **Ya puedes** hacer preguntas sobre los protocolos
+Este proyecto está bajo la licencia **Creative Commons Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0)**.
 
-### **Flujo completo:**
-```
-PDFs → Subes en interfaz → Sistema procesa → Chat disponible
-```
+Puedes:
+- Compartir: copiar y redistribuir el material
+- Adaptar: remezclar, transformar y construir sobre el material
 
-## 🚀 **Uso paso a paso**
+Bajo los siguientes términos:
+- **Atribución**: Debes dar crédito apropiado
+- **No Comercial**: No puedes usar el material con fines comerciales
 
-1. **Inicia** la aplicación:
-   ```bash
-   streamlit run app_final_mejorado.py
-   ```
+Ver [LICENSE](LICENSE) para más detalles o visita: https://creativecommons.org/licenses/by-nc/4.0/deed.es
 
-2. **Abre** tu navegador en `http://localhost:8501`
+## Autor
 
-3. **Sube** tus 3 PDFs de protocolos usando el área de carga
+**QFB Martín Ángel Carrízalez Piña**  
+*Especialista en IA y Ciencia de Datos aplicada a la Educación*
 
-4. **Espera** a que se procesen (verás una barra de progreso)
+- Email: martin.carrizalez0823@alumnos.udg.mx
+- LinkedIn: [https://www.linkedin.com/in/martin-angel-carrizalez-pina-b55475371/]
+- GitHub: [https://github.com/Martin-carrizalez]
 
-5. **Haz preguntas** como:
-   - "¿Qué hacer si un estudiante se accidenta?"
-   - "Protocolo para casos de violencia escolar"
-   - "¿Cómo actuar ante un robo en el colegio?"
+## Contribuciones
 
-## ⚠️ **Problemas comunes y soluciones**
+Este es un proyecto educativo abierto. Si deseas contribuir:
 
-### Error: "No module named 'sentence_transformers'"
-```bash
-pip install sentence-transformers==2.2.2
-```
+1. Fork el proyecto
+2. Crea una rama para tu mejora (`git checkout -b mejora/NuevaParte`)
+3. Commit tus cambios (`git commit -m 'Añadir nueva sección'`)
+4. Push a la rama (`git push origin mejora/NuevaParte`)
+5. Abre un Pull Request
 
-### Error: "GROQ_API_KEY not found"
-- Verifica que el archivo `.streamlit/secrets.toml` existe
-- Verifica que la clave API es correcta
-- O usa la opción B (directamente en código)
+**Nota**: Las contribuciones deben mantener el enfoque educativo y no comercial del proyecto.
 
-### Error: "No se pueden procesar PDFs"
-- Verifica que los PDFs no están protegidos con contraseña
-- Asegúrate de que son PDFs con texto (no solo imágenes)
+## Contacto y Soporte
 
-### La aplicación no encuentra información
-- Verifica que subiste los PDFs correctamente
-- Prueba con preguntas más específicas
-- Los PDFs deben contener texto legible
+¿Dudas, sugerencias o quieres compartir tu experiencia?
 
-## 🎯 **Tipos de preguntas que puedes hacer**
+- Email: martin.carrizalez0823@alumnos.udg.mx
+- Issues en GitHub: [Crear issue](https://github.com/Martin-carrizalez)
 
-### ✅ **Ejemplos buenos:**
-- "¿Qué pasos seguir ante un accidente de un estudiante?"
-- "Protocolo de evacuación en caso de emergencia"
-- "¿A quién contactar si hay violencia en el aula?"
-- "Procedimiento para reportar un robo"
+## Agradecimientos
 
-### ❌ **Evita preguntas muy generales:**
-- "¿Qué dice el documento?"
-- "Explícame todo"
-- "¿Qué protocolos hay?"
+- A los docentes que día a día protegen a nuestros estudiantes
+- A las instituciones educativas que implementan protocolos de seguridad
+- A la comunidad open source por las herramientas utilizadas
 
-## 🔍 **Características avanzadas**
+## Versión
 
-- **Debug info**: Expande "🔧 Información de búsqueda" para ver qué encontró
-- **Ejemplos**: Usa los botones de ejemplo en la barra lateral
-- **Múltiples PDFs**: Sube todos tus documentos de una vez
-- **Historial**: El chat mantiene conversaciones previas
+**v1.0.0** - Lanzamiento inicial (2025)
 
-## 📞 **¿Necesitas ayuda?**
+---
 
-Si algo no funciona:
-1. Verifica que instalaste todas las dependencias
-2. Confirma que la API key está configurada
-3. Asegúrate de que los PDFs se subieron correctamente
-4. Revisa la consola donde ejecutaste streamlit para errores
+*Creado con el objetivo de apoyar a docentes mexicanos en el cumplimiento de protocolos educativos y prevenir situaciones de omisión legal.*

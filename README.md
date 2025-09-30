@@ -32,11 +32,8 @@ Diseño intuitivo con tarjetas y acordeones interactivos
 
 
 🌐 Ver la Guía
-📖 Versión Web Interactiva
-👉 Ver Guía Completa
-📥 Descargar para Uso Offline
-👉 Descargar HTML
-Descárgalo una vez, úsalo siempre (incluso sin internet)
+📖 Versión Web Interactiva [https://github.com/Martin-carrizalez/guia-ia-educadores]
+
 
 📚 Contenido Incluido
 🩺 1. Emergencias Médicas
@@ -138,20 +135,14 @@ Commit cambios (git commit -m 'Añadir protocolo de...')
 Push (git push origin mejora/NuevaSeccion)
 Abre Pull Request
 
-
-📊 Estadísticas
-Mostrar imagen
-Mostrar imagen
-Mostrar imagen
-
 📞 Contacto y Soporte
 Creado por:
 QFB Martín Ángel Carrízalez Piña
 Especialista en IA y Ciencia de Datos aplicada a la Educación
 
 📧 Email: martin.carrizalez0823@alumnos.udg.mx
-💼 LinkedIn: Conectemos
-💻 GitHub: @TU-USUARIO
+💼 LinkedIn: https://www.linkedin.com/in/martin-angel-carrizalez-pina-b55475371/
+💻 GitHub: @Martin.carrizalez
 
 ¿Dudas o sugerencias?
 
@@ -170,7 +161,6 @@ Ayúdanos a llegar a más docentes:
 
 
 📄 Licencia
-Mostrar imagen
 Este proyecto está bajo Creative Commons Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0)
 Puedes:
 

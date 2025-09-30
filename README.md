@@ -182,15 +182,6 @@ Bajo estas condiciones:
 - ✅ Funcionalidad offline completa.
 
 
-🎯 **Roadmap - Próximas Mejoras**
-
-- [ ] Versión en PDF descargable.
-- [ ] Video tutoriales de uso.
-- [ ] Checklist imprimible para cada protocolo.
-- [ ] Versión para personal administrativo.
-- [ ] Integración con formatos oficiales SEP.
-- [ ] Traducción a lenguas indígenas.
-
 ¿Tienes ideas? [Compártelas aquí](https://github.com/Martin-carrizalez/guia-ia-educadores/issues/new/choose).
 
 💖 **Agradecimientos**

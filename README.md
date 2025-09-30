@@ -30,7 +30,7 @@ Esta herramienta fue creada específicamente para docentes mexicanos que necesit
 
 
 🌐 **Ver la Guía**
-📖 **[Haz clic aquí para abrir la Versión Web Interactiva](https://martin-carrizalez.github.io/guia-ia-educadores/guia-protocolos.html)**
+📖 **[Haz clic aquí para abrir la Versión Web Interactiva](https://martin-carrizalez.github.io/protocol-bot/)**
 
 
 📚 **Contenido Incluido**
@@ -77,7 +77,7 @@ Esta herramienta fue creada específicamente para docentes mexicanos que necesit
 🚀 **Cómo Usar**
 **Opción 1: Directo en el Navegador (Recomendado)**
 
-1.  Abre el enlace: **[Guía Interactiva de Protocolos](https://martin-carrizalez.github.io/guia-ia-educadores/guia-protocolos.html)**
+1.  Abre el enlace: **[Guía Interactiva de Protocolos](https://martin-carrizalez.github.io/protocol-bot/)**
 2.  Haz clic en la sección que necesites (médica, violencia, seguridad).
 3.  Toca la tarjeta de tu situación específica.
 4.  Lee los pasos numerados y actúa.

@@ -1,8 +1,7 @@
 ![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
+
 🚨 Guía Interactiva de Protocolos Educativos
 Protege tu carrera, protege a tus estudiantes: Guía práctica para docentes mexicanos
-Mostrar imagen
-Mostrar imagen
 
 🎯 ¿Para quién es esta guía?
 Esta herramienta fue creada específicamente para docentes mexicanos que necesitan consultar rápidamente protocolos de actuación en situaciones críticas.
